@@ -7,7 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.core.format.InputAccessor.Std;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Student {
@@ -30,6 +31,7 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name ="schoolClass_id")
+    @JsonIgnore
     private SchoolClass schoolClass;
 
 
