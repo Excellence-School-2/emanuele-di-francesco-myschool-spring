@@ -46,7 +46,10 @@
         </thead>
         <tbody>
           <tr th:each="schoolClass: ${schoolClasses}">
-            <td th:text= "${schoolClass.getSection()}">Nome Classe</td>
+            <td> 
+                <a th:text= "${schoolClass.getSection()}" 
+                    th:href="@{/students/{section}(section=${schoolClass.getSection()})}"> Nome Classe </a>
+            </td>
             <td th:text= "${schoolClass.getStudentNumber()}">Numero Alunni</td>
           </tr>
         </tbody>

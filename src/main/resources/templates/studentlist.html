@@ -48,7 +48,7 @@
             <td th:text= "${student.getName()}">Nome </td>
             <td th:text= "${student.getSurname()}">Cognome </td>
             <td th:text= "${student.getAge()}">Età </td>
-            <td th:text= "${student.getSchoolClass().getSection()}">Classe </td>
+            <td><a th:text= "${student.getSchoolClass().getSection()}" th:href="@{/students/{section}(section=${student.getSchoolClass().getSection()})}"> Classe </a></td>
           </tr>
         </tbody>
       </table>
